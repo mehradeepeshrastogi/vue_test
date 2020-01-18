@@ -43,6 +43,6 @@
 
 <script>
     export default{
-      'base_url':'http://172.104.8.51/bonjob/services/',
+      'base_url':'http://localhost/bonjob/services/',
     }
 </script>
