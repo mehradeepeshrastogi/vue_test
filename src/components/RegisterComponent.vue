@@ -12,7 +12,9 @@
                             <div class="form-group">
                                 <label>First Name:</label>
                                 <input type="text" class="form-control" v-model="registrationForm.first_name">
+                                <span style="color:red;" v-if="error.first_name!=''">{{error.first_name}}</span>
                             </div>
+                            
                         </div>
                     </div>
 
@@ -22,6 +24,7 @@
                             <div class="form-group">
                                 <label>Last Name:</label>
                                 <input type="text" class="form-control" v-model="registrationForm.last_name">
+                                 <span style="color:red;" v-if="error.last_name!=''">{{error.last_name}}</span>
                             </div>
                         </div>
                     </div>
@@ -31,6 +34,7 @@
                             <div class="form-group">
                                 <label>Email:</label>
                                 <input type="text" class="form-control" v-model="registrationForm.email">
+                                 <span style="color:red;" v-if="error.email!=''">{{error.email}}</span>
                             </div>
                         </div>
                     </div>
@@ -40,6 +44,7 @@
                             <div class="form-group">
                             <label>Password:</label>
                             <input type="password" class="form-control" v-model="registrationForm.password">
+                             <span style="color:red;" v-if="error.password!=''">{{error.password}}</span>
                             </div>
                          </div>
                     </div>
@@ -49,6 +54,7 @@
                             <div class="form-group">
                                 <label>City:</label>
                                 <input type="text" class="form-control" v-model="registrationForm.city">
+                                 <span style="color:red;" v-if="error.city!=''">{{error.city}}</span>
                             </div>
                         </div>
                     </div>
@@ -85,6 +91,7 @@ import App from '../App.vue'
               'user_type':'employer'
           },
           user_info:{},
+          error:[],
           headerWithoutToken:{
             'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8',
             'language_id':'1',
@@ -92,7 +99,6 @@ import App from '../App.vue'
             'appType':'4',
           },
           loading:false,
-          error:false,
         }
     },
     methods: {
@@ -117,8 +123,7 @@ import App from '../App.vue'
                 window.localStorage.setItem('user_data',JSON.stringify(self.user_info.data[0]));
                 this.$router.push('/');
             }else{
-                alert("sorry, you are not register");
-                this.$router.push('/registration');
+                self.error = self.user_info.data[0];
             }
         });
       }
