@@ -33,8 +33,6 @@
 </template>
 
 <script>
-
-// developed by deepesh rastogi
 import App from '../App.vue'
     export default {
         metaInfo: {
@@ -93,5 +91,4 @@ import App from '../App.vue'
       }
     }
   }
-//// developed by deepesh rastogi
 </script>
