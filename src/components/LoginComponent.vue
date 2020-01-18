@@ -68,16 +68,10 @@ import App from '../App.vue'
         end */
 
         var self = this;
-        // console.log(self.loginForm);
-        // console.log(App.base_url);
-        
         let uri = App.base_url+'empLogin';
         const config = { 
             headers: self.headerWithoutToken,
         }
-        // .then(response => {
-        // self.user_info = response.data.bpi
-    //   })
         this.axios.post(uri,self.loginForm,config).then(response => {
             self.user_info = response.data;
             if(self.user_info.success == true){

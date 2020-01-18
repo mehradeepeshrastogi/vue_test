@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -11,11 +12,23 @@
         <li class="nav-item">
           <router-link to="/posts" class="nav-link">Posts</router-link>
         </li>
+
+        <li class="nav-item">
+          <router-link to="/candidate-search" class="nav-link">Candidate Search</router-link>
+        </li>
+
+        <li class="nav-item">
+          <router-link to="/registration" class="nav-link">Registration</router-link>
+        </li>
+         <li class="nav-item">
+          <router-link to="/login" class="nav-link">Login</router-link>
+        </li>
       </ul>
     </nav><br />
     <transition name="fade">
       <router-view></router-view>
     </transition>
+
   </div>
 </template>
 
@@ -30,6 +43,6 @@
 
 <script>
     export default{
-      'base_url':'http://localhost/bonjob/services/',
+      'base_url':'http://172.104.8.51/bonjob/services/',
     }
 </script>

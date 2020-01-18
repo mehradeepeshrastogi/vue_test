@@ -17,6 +17,8 @@ import CreateComponent from './components/CreateComponent.vue';
 import IndexComponent from './components/IndexComponent.vue';
 import EditComponent from './components/EditComponent.vue';
 import LoginComponent from './components/LoginComponent.vue';
+import RegisterComponent from './components/RegisterComponent.vue';
+import CandidateSearchComponent from './components/CandidateSearchComponent.vue';
 
 const routes = [
   {
@@ -56,6 +58,16 @@ const routes = [
     name: 'login',
     path: '/login',
     component: LoginComponent
+  },
+  {
+    name: 'registration',
+    path: '/registration',
+    component: RegisterComponent
+  },
+  {
+    name: 'candidate_search',
+    path: '/candidate-search',
+    component: CandidateSearchComponent
   }
 ];
 const router = new VueRouter({ mode: 'history', routes: routes});

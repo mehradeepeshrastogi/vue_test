@@ -10,7 +10,6 @@
                         <tr><td colspan="2"><img v-bind:src="user_data.user_pic"></td></tr>
                         <tr><td>Name </td><td>{{ user_data.first_name+' '+user_data.last_name }}</td></tr>
                         <tr><td>Email </td><td>{{ user_data.email }}</td></tr>
-                        <tr><td>Email </td><td>{{ user_data.email }}</td></tr>
                         <tr><td>Contact No. </td><td>{{ user_data.mobile_number }}</td></tr>
                         <tr><td>Address </td><td>{{ user_data.address }}</td></tr>
                         <tr><td>Enterprise </td><td>{{ user_data.enterprise_name }}</td></tr>
